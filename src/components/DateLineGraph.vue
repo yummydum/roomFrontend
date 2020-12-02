@@ -54,12 +54,12 @@ export default {
       // Format dates
       let d1 = this.state.startDate;
       console.log(d1);
-      let s = `${d1.getFullYear()}-${d1.getMonth() + 1}-${d1.getDate() + 1}`;
+      let s = `${d1.getFullYear()}-${d1.getMonth() + 1}-${d1.getDate()}`;
       let d2 = this.state.endDate;
       let e = `${d2.getFullYear()}-${d2.getMonth() + 1}-${d2.getDate() + 1}`;
 
       // Fetch data
-      let q = `http://localhost:5000/data?start_date=${s}&end_date=${e}&measure=${this.measure}`;
+      let q = `http://192.168.100.114:5000/data?start_date=${s}&end_date=${e}&measure=${this.measure}`;
       console.log(q);
       axios
         .get(q)
